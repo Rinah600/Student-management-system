@@ -15,7 +15,7 @@ class StudentManager:
 
         for course in COURSES:
             print(course)
-    def__init__(self):
+    def __init__(self):
         self.students = []
         self.student_id = set()
         self.student_lookup = {}
@@ -47,8 +47,8 @@ class StudentManager:
             print("-------------------------")
             student.display_details()
             
-#method to search for a student
-        def search_student(self, student_id):
+    # method to search for a student
+    def search_student(self, student_id):
         student = self.student_lookup.get(student_id)
 
         if student:
