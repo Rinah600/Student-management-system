@@ -1,6 +1,20 @@
 #handles registration, searching, updating and deleting of students
 from student import Student
+COURSES = (
+    "Computer Science",
+    "Information Technology",
+    "Software Engineering",
+    "Data Science",
+    "Information Systems"
+)
 class StudentManager:
+#using a tuple with a for lopp
+    def view_courses(self):
+
+        print("\n===== AVAILABLE COURSES =====")
+
+        for course in COURSES:
+            print(course)
     def__init__(self):
         self.students = []
         self.student_id = set()
@@ -56,3 +70,30 @@ class StudentManager:
             print("Student not found.")
             
             
+#update student details       
+    def update_student(self, student_id):
+
+        student = self.student_lookup.get(student_id)
+
+        if student:
+            print("Leave a field blank to keep its current value.")
+
+            new_name = input("Enter new name: ")
+            new_age = input("Enter new age: ")
+            new_course = input("Enter new course: ")
+
+            if new_name:
+                student.name = new_name
+
+            if new_age:
+                try:
+                    student.age = int(new_age)
+                except ValueError:
+                    print("Invalid age. Keeping the previous age.")
+
+            if new_course:
+                student.course = new_course
+
+            print("Student details updated!")
+        else:
+            print("Student not found.")
