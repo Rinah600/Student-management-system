@@ -20,3 +20,15 @@ class StudentManager:
         self.student_lookup[student_id] = student
 
         print("Student registered successfully!")
+        
+#loops to process and view multiple records
+    def view_students(self):
+        if not self.students:
+            print("No students have been registered yet.")
+            return
+
+        print("\n===== REGISTERED STUDENTS =====")
+
+        for student in self.students:
+            print("-------------------------")
+            student.display_details()
