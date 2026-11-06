@@ -1,1 +1,1 @@
-#handles registration, seraching, updating and deleting of students
+#handles registration, searching, updating and deleting of students
