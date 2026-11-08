@@ -17,7 +17,7 @@ class StudentManager:
             print(course)
     def __init__(self):
         self.students = []
-        self.student_id = set()
+        self.student_ids = set()
         self.student_lookup = {}
         
 #to register the students
